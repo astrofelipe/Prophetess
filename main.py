@@ -197,10 +197,11 @@ class Bot:
     @send_photo_action
     def fc_id(self, bot, update):
         objid = update.message.text
-        #bot.send_chat_action(chat_id=update.message.chat_id, action=telegram.ChatAction.UPLOAD_PHOTO)
-        FindingChart(objid)
-        #bot.send_chat_action(chat_id=update.message.chat_id, action=telegram.ChatAction.UPLOAD_PHOTO)
-        bot.send_photo(chat_id=update.message.chat_id, photo=open('findingchart.png', 'rb'))
+        try:
+            FindingChart(objid)
+            bot.send_photo(chat_id=update.message.chat_id, photo=open('findingchart.png', 'rb'))
+        except:
+            update.message.reply_text("Sorry, couldn't query your object")
 
         return ConversationHandler.END
 
