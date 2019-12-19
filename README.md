@@ -8,12 +8,12 @@
  
  
 ## Required libraries
- -python-telegram-bot  
- -astroplan  
- -astropy  
- -emoji  
- -numpy  
- -matplotlib  
+ *python-telegram-bot  
+ *astroplan  
+ *astropy  
+ *emoji  
+ *numpy  
+ *matplotlib  
  
 ## Installation
 You should create an 'auth.py' file which contains a variable token with your Telegram Bot token in string format. Then just run 'main.py' and start interacting.
