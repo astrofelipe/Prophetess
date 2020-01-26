@@ -148,7 +148,7 @@ class Bot:
                 self.ra, self.dec = res['ra'][0], res['dec'][0]
 
                 coord       = SkyCoord(ra=self.ra*u.deg, dec=self.dec*u.deg)
-                self.target = FixedTarget(coord=coord, name=self.objid)
+                self.target = FixedTarget(coord=coord, name='TIC ' + self.objid)
 
         except:
             update.message.reply_text("Sorry, couldn't query your object")
