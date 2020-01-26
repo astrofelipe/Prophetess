@@ -113,7 +113,7 @@ class Bot:
 
         update.message.reply_text('Next transits will occur in: ')
         #update.message.reply_text('\n'.join(necl.strftime('%d/%m/%y\t %H:%M')))
-        update.message.reply_text('\n'.join(necl.strftime('%Y/%m/%d\t %H:%M (UTC)')))
+        update.message.reply_text('\n'.join(necl.strftime('%Y-%m-%d\t %H:%M (UTC)')))
         return ConversationHandler.END
 
     def vis_start(self, bot, update):
