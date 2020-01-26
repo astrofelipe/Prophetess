@@ -111,8 +111,9 @@ class Bot:
         P, t0, dur = np.array(update.message.text.split(' ')).astype(float)
         necl       = Eclipse(t0,P,dur)
 
-        update.message.reply_text('Next eclipses will be on: ')
-        update.message.reply_text('\n'.join(necl.strftime('%d/%m/%y\t %H:%M')))
+        update.message.reply_text('Next transits will occur in: ')
+        #update.message.reply_text('\n'.join(necl.strftime('%d/%m/%y\t %H:%M')))
+        update.message.reply_text('\n'.join(necl.strftime('%Y/%m/%d\t %H:%M (UTC)')))
         return ConversationHandler.END
 
     def vis_start(self, bot, update):

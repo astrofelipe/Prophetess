@@ -13,7 +13,7 @@ def Eclipse(tt0, P, dur=None):
     today  = Time(datetime.datetime.utcnow())
     eclsys = EclipsingSystem(primary_eclipse_time=t0,
                              orbital_period=P*u.day, duration=dur*u.hour)
-    necl   = eclsys.next_primary_eclipse_time(today, n_eclipses=5)
+    necl   = eclsys.next_primary_eclipse_time(today, n_eclipses=10)
 
     return necl
 
